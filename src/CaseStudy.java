@@ -13,7 +13,10 @@ import java.util.Scanner;
 public class CaseStudy {
 
    public static void main(String[] args) {
-       Student srini = new Student();
+     
+            
+       Student srini = new Student(); 
+      
         srini.name = "Srinivas";
         srini.english = 87;
         srini.telugu = 84;
@@ -41,10 +44,44 @@ public class CaseStudy {
       int result1 = minFunction(a, b);
       
       // same function name with different parameters
-      double result2 = minFunction(c, d);
+      double result2 = minFunction(c, p);
       System.out.println("Minimum Value = " + result1);
       System.out.println("Minimum Value = " + result2);
+      
+       System.out.println("Are you a student here");
+       System.out.println(legalage(18));
+             System.out.println("This is your Subject");
+            String[][] sb={{"Math(2.50)","Enlish(1.50)","Programming(2.0)"},{"Capstone(2.25)","IPT(1.0)","SAM(1.25)"}};
+            sub(sb);
+             System.out.println("this is your average");
+             double d = grade(2.50,1.50,2.0,2.25,1.0,1.25);
+             System.out.println(d/6);
    }
+    public static boolean legalage(int age){
+   
+    if(age >= (18)){ 
+        return true;
+       
+    }  else{
+        return false;
+    } 
+}
+    public static void sub(String[][] sb ){
+    
+        for(String[] Sub: sb){
+        for(String s: Sub){
+        System.out.print(s+" ");
+        }
+        System.out.println();
+        }
+        
+    }
+    public static double grade(double m, double e, double p, double c, double i, double s){
+        return m+e+p+c+i+s;
+        
+        
+   }
+
 
    // for integer
    public static int minFunction(int n1, int n2) {
@@ -116,6 +153,9 @@ class Student
         System.out.println("Maths : " + maths);
         System.out.println("Science : " + science);
         System.out.println("Social : " + social);
+        }
+    
+   
    }
 
-    }
+    
