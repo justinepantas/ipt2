@@ -11,23 +11,38 @@
 public class CaseStudy {
 
    public static void main(String[] args) {
-      int a = 30;
-      int b = 45;
-      System.out.println("Before swapping, a = " + a + " and b = " + b);
-
-      // Invoke the swap method
-      swapFunction(a, b);
-      System.out.println("\n**Now, Before and After swapping values will be same here**:");
-      System.out.println("After swapping, a = " + a + " and b is " + b);
-   }
-
-   public static void swapFunction(int a, int b) {
-      System.out.println("Before swapping(Inside), a = " + a + " b = " + b);
+      int a = 11;
+      int b = 6;
+      double c = 7.3;
+      double p = 9.4;
+      int result1 = minFunction(a, b);
       
-      // Swap n1 with n2
-      int c = a;
-      a = b;
-      b = c;
-      System.out.println("After swapping(Inside), a = " + a + " b = " + b);
+      // same function name with different parameters
+      double result2 = minFunction(c, d);
+      System.out.println("Minimum Value = " + result1);
+      System.out.println("Minimum Value = " + result2);
    }
+
+   // for integer
+   public static int minFunction(int n1, int n2) {
+      int min;
+      if (n1 > n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   }
+   
+   // for double
+   public static double minFunction(double n1, double n2) {
+     double min;
+      if (n1 > n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   }
+}
 }
